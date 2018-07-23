@@ -10,8 +10,8 @@ $ npm install mini-base64 --save
 ```js
 const { arrayBufferToBase64, base64ToArrayBuffer } = require('mini-base64');
 
-const base64 = 'QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVphYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5ejAxMjM0NTY3ODk=';
-console.log(arrayBufferToBase64(base64ToArrayBuffer(base64)) === base64); // true
+const bs64 = 'QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVphYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5ejAxMjM0NTY3ODk=';
+console.log(arrayBufferToBase64(base64ToArrayBuffer(bs64)) === bs64); // true
 
 // 将 ArrayBuffer 数据转成 Base64 字符串
 const arrayBuffer = new Uint8Array([11, 22, 33])
