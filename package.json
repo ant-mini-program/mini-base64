@@ -2,6 +2,10 @@
   "name": "mini-base64",
   "version": "0.1.0",
   "description": "小程序base64与arrayBuffer转换",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ant-mini-program/mini-base64.git"
+  },
   "files": [
     "lib",
     "es"
@@ -17,7 +21,7 @@
     "base64",
     "mini-program"
   ],
-  "author": "",
+  "author": "issac.lj@alibaba-inc.com",
   "devDependencies": {
     "rc-tools": "^8.1.5"
   }
