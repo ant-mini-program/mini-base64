@@ -3,15 +3,22 @@
   "version": "0.1.0",
   "description": "小程序base64与arrayBuffer转换",
   "files": [
-    "lib"
+    "lib",
+    "es"
   ],
   "main": "lib/index.js",
+  "module": "es/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rc-tools run compile",
+    "pub": "git push origin && npm run build && npm publish"
   },
   "keywords": [
     "base64",
     "mini-program"
   ],
-  "author": ""
+  "author": "",
+  "devDependencies": {
+    "rc-tools": "^8.1.5"
+  }
 }

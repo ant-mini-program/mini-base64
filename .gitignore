@@ -1,2 +1,6 @@
 .idea
 .prettierrc
+lib
+es
+yarn.lock
+node_modules

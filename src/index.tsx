@@ -1,5 +1,5 @@
 function arrayBufferToBase64(buffer) {
-  let result = '';
+  let result = "";
   const uintArray = new Uint8Array(buffer);
   const byteLength = uintArray.byteLength;
   for (let i = 0; i < byteLength; i++) {
@@ -20,14 +20,14 @@ function base64ToArrayBuffer(base64) {
 
 function encode(str) {
   let encodings =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
   const string = String(str);
-  let result = '';
+  let result = "";
   let currentIndex = 0;
   let sum;
   while (
     string.charAt(0 | currentIndex) ||
-    ((encodings = '='), currentIndex % 1)
+    ((encodings = "="), currentIndex % 1)
   ) {
     currentIndex += 0.75; // 每次移动3/4个位置
     let currentCode = string.charCodeAt(currentIndex); // 获取code point
@@ -45,9 +45,9 @@ function encode(str) {
 
 function decode(str) {
   const encodings =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
-  let res = '';
-  const string = String(str).replace(/=+$/, '');
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+  let res = "";
+  const string = String(str).replace(/=+$/, "");
   if (string.length % 4 === 1) {
     throw new Error('"atob" failed');
   }
@@ -69,5 +69,7 @@ function decode(str) {
   return res;
 }
 
-module.exports.arrayBufferToBase64 = arrayBufferToBase64;
-module.exports.base64ToArrayBuffer = base64ToArrayBuffer;
+export default {
+  arrayBufferToBase64,
+  base64ToArrayBuffer
+};
