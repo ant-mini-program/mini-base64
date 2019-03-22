@@ -8,7 +8,9 @@ $ npm install mini-base64 --save
 ## 使用
 
 ```js
-const { arrayBufferToBase64, base64ToArrayBuffer } = require('mini-base64');
+import utils from 'mini-base64';
+
+const {arrayBufferToBase64, base64ToArrayBuffer} = utils;
 
 const bs64 = 'QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVphYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5ejAxMjM0NTY3ODk=';
 console.log(arrayBufferToBase64(base64ToArrayBuffer(bs64)) === bs64); // true
